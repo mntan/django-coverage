@@ -154,7 +154,7 @@ class BaseLiveTestCase(LiveServerTestCase, UserTestBaseMixin):
         self.find("#id_username").send_keys(user.username)
         self.find("#id_password").send_keys(user.raw_password)
         self.find("input[type='submit']").click()
-        self.until(lambda: self.should_see_text(user.first_name))  # login successfully
+        # self.until(lambda: self.should_see_text(user.first_name))  # login successfully
 
     def element_exist(self, css_selector):
         try:
